@@ -45,6 +45,12 @@ public class DetailViewPanel extends javax.swing.JPanel {
         return txt_address;
         
     }
+       public javax.swing.JTextField getPincodeField()
+    {
+        
+        return txt_pincode;
+        
+    }
       public void setName(String name)
       {
           txt_name.setText(name);
@@ -57,9 +63,13 @@ public class DetailViewPanel extends javax.swing.JPanel {
       {
           txt_email.setText(email);
       }
-        public void seteAddress(String address)
+        public void setAddress(String address)
       {
           txt_address.setText(address);
+      }
+         public void setPincode(String pincode)
+      {
+          txt_pincode.setText(pincode);
       }
         public JComponent getComponent() 
         {
@@ -83,6 +93,8 @@ public class DetailViewPanel extends javax.swing.JPanel {
         txt_email = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         txt_address = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        txt_pincode = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(0, 204, 204));
         setForeground(new java.awt.Color(0, 204, 204));
@@ -126,6 +138,15 @@ public class DetailViewPanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel5.setText("PinCode");
+
+        txt_pincode.setName("txt_pincode"); // NOI18N
+        txt_pincode.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_pincodeActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -136,14 +157,17 @@ public class DetailViewPanel extends javax.swing.JPanel {
                     .addComponent(jLabel1)
                     .addComponent(jLabel2)
                     .addComponent(jLabel3)
-                    .addComponent(jLabel4))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jLabel5)
+                        .addComponent(jLabel4)))
                 .addGap(57, 57, 57)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(txt_name)
                     .addComponent(txt_mobileno)
                     .addComponent(txt_email, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
-                    .addComponent(txt_address))
-                .addContainerGap(14, Short.MAX_VALUE))
+                    .addComponent(txt_address)
+                    .addComponent(txt_pincode))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -164,7 +188,11 @@ public class DetailViewPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(txt_address, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(txt_pincode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         jLabel2.getAccessibleContext().setAccessibleName("Mobile no*");
@@ -182,14 +210,20 @@ public class DetailViewPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_addressActionPerformed
 
+    private void txt_pincodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_pincodeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_pincodeActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JTextField txt_address;
     private javax.swing.JTextField txt_email;
     private javax.swing.JTextField txt_mobileno;
     private javax.swing.JTextField txt_name;
+    private javax.swing.JTextField txt_pincode;
     // End of variables declaration//GEN-END:variables
 }

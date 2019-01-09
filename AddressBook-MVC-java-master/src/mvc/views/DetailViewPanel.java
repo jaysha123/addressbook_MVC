@@ -31,6 +31,7 @@ public class DetailViewPanel extends javax.swing.JPanel {
     {
         
         return txt_mobileno;
+       
         
     }
       public javax.swing.JTextField geteMailField()

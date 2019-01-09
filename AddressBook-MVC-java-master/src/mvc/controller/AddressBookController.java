@@ -58,13 +58,16 @@ public class AddressBookController {
                     openEdit();
                 else if(e.getSource() == view.getDelete())
                     openDelete();
+                
+                    
+                
             }
         };
         
         view.getAdd().addActionListener(actionListener);
         view.getDelete().addActionListener(actionListener);
         view.getEdit().addActionListener(actionListener);
-      
+        view.getSearch().addActionListener(actionListener);
     }
     
     
@@ -147,12 +150,37 @@ public class AddressBookController {
         boolean valid = false;
         String name = contactDetailsPanel.getNameField().getText();
         String mobile = contactDetailsPanel.getMobileField().getText();
+        //String strTest = "100";
+        //int iTest = Integer.parseInt(mobile);
+       // System.out.println("Actual String"+strTest);
+       // System.out.println("converted to Int:"+iTest);
+        //System.out.println("arthimetic operation on Int:"+(iTest/4));
+        long phone;
+        
+        
+        
+        String address = contactDetailsPanel.getAddressField().getText();
+        String pincode = contactDetailsPanel.getPincodeField().getText();
+        
         if (name==null||name.equals("")||(mobile==null||mobile.equals("")))
-            JOptionPane.showMessageDialog(new JFrame(), "Fields Marked as * are Mandatory","Inane error", JOptionPane.ERROR_MESSAGE);
-        else 
+          JOptionPane.showMessageDialog(new JFrame(), "Fields Marked as * are Mandatory","Inane error", JOptionPane.ERROR_MESSAGE);
+        
+        
+        
+        
+            
+        
+            
+            
+             
+            else if (address==null||address.equals(""))
+            JOptionPane.showMessageDialog(new JFrame(), "Fill the address correctly","Inane error", JOptionPane.ERROR_MESSAGE);
+        else if (pincode==null||pincode.equals(""))
+            JOptionPane.showMessageDialog(new JFrame(), "Fill the pincode correctly","Inane error", JOptionPane.ERROR_MESSAGE);
+        else
+          
             valid = true;
         return valid;
-               
     }
      
     private void openEdit(){
